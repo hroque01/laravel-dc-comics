@@ -5,8 +5,13 @@
     <ul>
         @foreach ($people as $person)
             <li>
-                {{ $person -> firstName }} {{ $person -> lastName}}
+                <a href="{{ route('person.show', $person) }}">
+                    {{ $person -> firstName }} {{ $person -> lastName}}
+                </a>
+                &rarr;
+                <a href="{{ route('person.delete', $person) }}">DELETE</a>
             </li>
+            <br>
         @endforeach
     </ul>
 @endsection
