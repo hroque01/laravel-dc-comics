@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    @extends('head')
+    <title>CRUD COMPLETA</title>
+    @yield('head')
 </head>
 <body>
-    @extends('components.header')  
+    @include('components.header')
+    @include('components.errors')
+
     @yield('main')
-    @extends('components.footer')
+    
+    @include('components.footer')
 </body>
 </html>
