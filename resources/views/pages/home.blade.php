@@ -10,6 +10,8 @@
                     {{ $person -> firstName }} {{ $person -> lastName}}
                 </a>
                 &rarr;
+                <a href="{{ route('person.edit', $person) }}">EDIT </a>
+                ||
                 <a href="{{ route('person.delete', $person) }}">DELETE</a>
             </li>
             <br>

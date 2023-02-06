@@ -12,8 +12,14 @@ Route::get('/person/show/{person}', [MainController::class, 'personShow'])->name
 // --- DELETE
 Route::get('/person/delete/{person}', [MainController::class, 'personDelete'])->name('person.delete');
 
-// --- CREATE
+// --- CREATE GET
 Route::get('/person/create', [MainController::class, 'personCreate'])->name('person.create');
 
-// --- POST
+// --- CREATE POST
 Route::post('/person/store', [MainController::class, 'personStore'])->name('person.store');
+
+// --- EDIT GET
+Route::get('/person/edit/{person}', [MainController::class, 'personEdit'])->name('person.edit');
+
+// --- EDIT POST
+Route::post('/person/update/{person}', [MainController::class, 'personUpdate'])->name('person.update');
