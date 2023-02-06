@@ -18,7 +18,7 @@ return new class extends Migration {
             $table->string('firstname', 32);
             $table->string('lastname', 32);
             $table->date('date');
-            $table->integer('height', 32);
+            $table->integer('height');
 
             $table->timestamps();
         });
