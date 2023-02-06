@@ -17,7 +17,10 @@ class PersonFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => fake()->firstName(),
+            'lastName' => fake()->lastName(),
+            'dateOfBirth' => fake()->dateTimeBetween('-30 years', '-10 years'),
+            'height' => fake()->numberBetween(140, 200),
         ];
     }
 }
